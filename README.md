@@ -48,7 +48,11 @@ READ IT FIRST AND ANYTHING YOU WOULD LIKE TO CONTACT ME, MAIL IT TO DHTMDGUSSKSM
     4-1. 2020. 6. 25. 19:05(KR)
         4-1-1. Add
                 A. Add Basically README.MD file:)
-                B. Add 1 of C File(factorial.c)
+                B. Add 4 of C File
+                 - Factorial function
+                 - Power function
+                 - Fibonaci function
+                 - Hanoi Tower algorithm function
 
 </pre></h4>
 <br>
