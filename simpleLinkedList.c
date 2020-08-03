@@ -112,7 +112,6 @@ ListNode *create_node(element data, ListNode *link) {
 	new_node->link = link;
 	return (new_node);
 }
-
 int main() {
 	ListNode *list1 = NULL;
 	ListNode *list2 = NULL;
