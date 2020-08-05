@@ -101,6 +101,18 @@ ListNode *reverse(ListNode *head) {
 	}
 	return q;
 }
+//리스트 길이 연산
+void get_length(ListNode *head) {
+	int size = 0;
+	ListNode *p = head;
+	while (p != NULL) {
+		printf("%d -> ", p->data);
+		p = p->link;
+		size++;
+	}
+	printf("length : %d\n",size);
+}
+
 //노드 동적 생성
 ListNode *create_node(element data, ListNode *link) {
 	ListNode *new_node;
@@ -123,15 +135,19 @@ int main() {
 	insert_node(&list1, NULL, create_node(30, NULL));
 	display(list1);
 
-	//list1 = 20 -> 10
-	remove_node(&list1, NULL, list1);
-	display(list1);
-
 	//list2 = 300 -> 200 -> 100
 	insert_node(&list2, NULL, create_node(100, NULL));
 	insert_node(&list2, NULL, create_node(200, NULL));
 	insert_node(&list2, NULL, create_node(300, NULL));
 	display(list2);
+
+	//length function
+	get_length(list1);
+	get_length(list2);
+
+	//list1 = 20 -> 10
+	remove_node(&list1, NULL, list1);
+	display(list1);
 
 	//list1 = list1 + list2
 	list1 = concat(list1, list2);
@@ -144,5 +160,6 @@ int main() {
 	//list1 20탐색
 	p = search(list1, 20);
 	printf("탐색 성공 : %d\n", p->data);
+
 	return 0;
 }
