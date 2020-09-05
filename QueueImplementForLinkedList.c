@@ -28,7 +28,7 @@ int is_empty(QueueType* q) {
 void enqueue(QueueType* q, element item) {
 	QueueNode* temp = (QueueNode*)malloc(sizeof(QueueNode));
 	if (temp == NULL) {
-		error("¸Ş¸ğ¸® ÇÒ´ç ºÒ°¡");
+		error("ë©”ëª¨ë¦¬ í• ë‹¹ ë¶ˆê°€");
 	}
 	else {
 		temp->item = item;
@@ -48,7 +48,7 @@ element dequeue(QueueType* q) {
 	QueueNode* temp = q->front;
 	element item;
 	if (is_empty(q)) {
-		error("Å¥ °ø¹é »óÅÂ");
+		error("í ê³µë°± ìƒíƒœ");
 	}
 	else {
 		item = temp->item;
@@ -63,7 +63,7 @@ element dequeue(QueueType* q) {
 
 element peak(QueueType* q) {
 	if (is_empty(q)) {
-		error("Å¥ °ø¹é »óÅÂ");
+		error("í ê³µë°± ìƒíƒœ");
 	}
 	return q->front->item;
 }
